@@ -1,0 +1,15 @@
+#----------------------------------------------------------------------------
+# Ignore these files when commiting to a git repository
+#----------------------------------------------------------------------------
+# Ignoring Database and Core File
+/app/Config/database.php
+/app/Config/core.php
+
+# Ignoring the temporary folder with cache and logs
+/app/tmp
+
+#Ignoring the temporary folder with phpstorm file.
+/.idea
+
+# Ignoring the image folder to be pushed to repository upstream
+/app/webroot/img/*
