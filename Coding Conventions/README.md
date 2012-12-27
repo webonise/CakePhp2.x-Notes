@@ -1,10 +1,12 @@
 <h1>CODING CONVENTIONS IN CAKEPHP</h1>
 
-Before we start with any type of coding conventions, I would prefer to go through following links
-[http://www.codeproject.com/Articles/22769/Introduction-to-Object-Oriented-Programming-Concep][ObjectOrientedConcept]
+Before we start with any type of coding conventions, I would prefer to go through some links
+
+1.[http://www.codeproject.com/Articles/22769/Introduction-to-Object-Oriented-Programming-Concep][ObjectOrientedConcept]
 [ObjectOrientedConcept]: http://www.codeproject.com/Articles/22769/Introduction-to-Object-Oriented-Programming-Concep
 
-
+2.[http://book.cakephp.org/2.0/en/index.html][Cake Book]
+[Cake Book]: http://book.cakephp.org/2.0/en/index.html
 
 The Cake PHP is one of the PHP framework created in MVC architecture. It follows all MVC conventions in coding.  Cake PHP consist of three layers.
 1. Model
@@ -122,3 +124,4 @@ Following are the conventions to be followed while creating any action
         }
     ?>
     ```
+
