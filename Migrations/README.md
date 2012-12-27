@@ -29,7 +29,6 @@ The up part is where you write the code for creating tables,adding columns,updat
 
 #### Syntax for Creating Tables ####
 
-    ```Php
     'up' => array(
 	    'create_table' => array(
 		    'user' => array(
@@ -78,7 +77,7 @@ The up part is where you write the code for creating tables,adding columns,updat
 		        )
 	        )
         )
-    ```
+
 
 #### Syntax for Dropping Tables ####
 
