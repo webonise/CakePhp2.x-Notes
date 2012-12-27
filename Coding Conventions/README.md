@@ -194,9 +194,7 @@ In above, we have declared a variable as $component which include th component i
     ?>
     ```
 
-In above, we have created a file upload component which uploads the file on server in specific folder.
-Now, how we are going to use it in controller where I want upload a file. Lets take an another example.
-Suppose, I want to upload an image of user. So I will do my functionality in "UsersController.php". Lets take a look
+In above, we have created a file upload component which uploads the file on server in specific folder.Now, how we are going to use it in controller where I want upload a file. Lets take an another example.Suppose, I want to upload an image of user. So I will do my functionality in "UsersController.php". Lets take a look
 
     #app/Controller/Component/FileUpload.php
 
