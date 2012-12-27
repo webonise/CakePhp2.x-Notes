@@ -45,8 +45,8 @@ Parameters:
 
  This method is used 2 parameters,
 
- $id - Primary key value of row
- $direct - It is optional and used to whether or not only directed children count.
+ `$id - Primary key value of row.
+ $direct - It is optional and used to whether or not only directed children count.`
 
  - This method will return children associated with this $id.
  - If we set $direct =true.. it will give the direct descendants.
@@ -74,4 +74,6 @@ Use: This method is used to generate tree list
     This method will return parent node if parent is not present then it will return false i.e there is no parent
     ` $parent = $this->Category->getParentNode(2); //<- id for fun
       // $parent contains All categories `
+
 ###getPath($id = null, $fields = null, $recursive = null)###
+
