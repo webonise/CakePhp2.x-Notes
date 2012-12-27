@@ -35,17 +35,17 @@ Eg.
 
     In $this->request->data you will get information about the uplaoded file like
 
-`[User]
-(
-  [image]=>array
+    [User]
     (
-      [name] => pic.gif
-      [type] => image/gif
-      [tmp_name] => /tmp/phpVq9TUk
-      [error] => 0
-      [size] => 34635
+    [image]=>array
+        (
+        [name] => pic.gif
+        [type] => image/gif
+        [tmp_name] => /tmp/phpVq9TUk
+        [error] => 0
+        [size] => 34635
+        )
     )
-)`
 
 * FileUploadComponent has method
 
