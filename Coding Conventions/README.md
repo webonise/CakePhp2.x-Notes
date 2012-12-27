@@ -58,7 +58,7 @@ The model class starts with following convetions
 12.  Keep Proper Relations with associated models
 13.  Keep validations for required fields.
 14. Eg.
-
+    ```Ruby
     <?php
         App::uses('AppModel', 'Model');
         //Comments
@@ -71,7 +71,7 @@ The model class starts with following convetions
             }
         }
     ?>
-
+    ```
 
 <h3>CONTROLLER</h3>
 Controller in Cake PHP are responsible for handling processing part of the application. It is a middle layer between modal and view.
