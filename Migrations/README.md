@@ -112,6 +112,7 @@ Create Field is used to add fields to an existing table in the schema.
 #### Syntax for Drop Field ####
 
 Drop field is used for removing fields from existing tables in the schema.
+
 	'drop_field' => array(
 		'users' => array(
 			'created',
