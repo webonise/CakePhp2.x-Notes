@@ -18,8 +18,10 @@ or one can follow the shell script for PHP dev environment - click here
 After uploading the file to Local Server (i.e Apache), pass the physical path of the file to be resized to ImageMagick, followed with the dimensions and the path to resized file.
 
 
-**.$this->ImageMagick->resize([FILE_PATH] , [WIDTH] , [HEIGHT] , [TAG] , [CACHED_FILE_PATH] , [QUALITY] , [PHYSICAL_PATH_OF_THE_FILE_TO_BE_RESIZED] );.**
+...ImageMagick
+$this->ImageMagick->resize([FILE_PATH] , [WIDTH] , [HEIGHT] , [TAG] , [CACHED_FILE_PATH] , [QUALITY] , [PHYSICAL_PATH_OF_THE_FILE_TO_BE_RESIZED] );**
 
 
 Usually, Tag is kept as TRUE and Quality is kept as 100;for a better quality image after resizing.
 I hope this helps. Please feel free to add/edit the post, as per convenience.
+...
