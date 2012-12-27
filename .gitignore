@@ -12,4 +12,4 @@
 /.idea
 
 # Ignoring the image folder to be pushed to repository upstream
-/app/webroot/img/*
+# /app/webroot/img/*
