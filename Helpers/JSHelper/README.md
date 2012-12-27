@@ -25,7 +25,7 @@ While using the JSHelper first of all you'll have to download your preferred jav
 
 Javascript engine selection is declared when you include the helper in your controller:
 
-        **public $helpers = array('Js' => array('Jquery'));**
+        public $helpers = array('Js' => array('Jquery'));
 
 The above would use the Jquery Engine in the instances of JsHelper in your views. If you do not declare a specific engine, the jQuery engine will be used as the default.
 
@@ -34,27 +34,26 @@ The above would use the Jquery Engine in the instances of JsHelper in your views
 
 Declare the JsHelper in the $helpers array in your customHelper:
 
-    **public $helpers = array('Js');**
+        public $helpers = array('Js');
 
 If you are willing to use an other javascript engine than the default, do the helper setup in your controller as follows:
 
-    **public $helpers = array(
-        'Js' => array('Prototype'),
-        'CustomHelper'
-    );**
+        public $helpers = array(
+            'Js' => array('Prototype'),
+            'CustomHelper'
+        );
 
 
 ## Javascript engine usage
 
 Since most methods in Javascript begin with a selection of elements in the DOM, $this->Js->get() returns a **$this**, allowing you to chain the methods using the selection. Method chaining allows you to write shorter, more expressive code:
 
-    **$this->Js->get('#foo')->event('click', $eventCode);**
+    $this->Js->get('#foo')->event('click', $eventCode);
 
-    **OR**
+    OR
 
-    **$this->Js->get('#foo');
-
-    $this->Js->event('click', $eventCode);**
+    $this->Js->get('#foo');
+    $this->Js->event('click', $eventCode);
 
 
 ## Working with buffered scripts
