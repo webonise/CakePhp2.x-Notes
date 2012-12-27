@@ -15,7 +15,16 @@
 
     -    left         : To store the left value of current row .( default :lft)
 
-    -    right         : To store the right value of current row(Default :rght)
+    -    right         : To store the right value of current row(Default :rght).
+
+** Adding your data**
+
+
+** Deleting your data**
+
+** modifying your data**
+
+** Adding your data**
 
 
 
