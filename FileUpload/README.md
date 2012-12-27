@@ -87,6 +87,7 @@ Eg.
     class AppController extends Controller {
          public $permitted = array('image/jpeg', 'image/jpg', 'image/jpe_', 'image/pjpeg',
                     'image/jpeg', 'image/jpg',  'image/pjpeg', 'image/pipeg'...');
+
                     ```
 
 
@@ -99,6 +100,7 @@ Eg.
 ```Php
    $this->FileUpload->uploadFiles('img/UserImage', $this->request->data[‘User’]['image']
                 , null, $this->permitted, false);
+                
                 ```
 
      So it will save image inside folder ‘app/webroot/img/UserImage’ having name ‘pic.gif’
