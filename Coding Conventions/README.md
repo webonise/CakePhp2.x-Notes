@@ -16,7 +16,7 @@ Lets take a look at following coding conventions in CakePHP
 
 <h3>MODEL</h3>
 
-Modals are mostly responsible for data fetching and associations. But it is not all of its functionality. It is also responsible for the business logic of the application. All the business login is been handled in modal side of the code. Creating associations, saving , updating and  deleting data, and fetching data from tables are the basic functionality of the modal in Cake PHP
+Modals are mostly responsible for data fetching and associations. But it is not all of its functionality. It is also responsible for the business logic of the application. All the business login is been handled in modal side of the code. Creating associations, saving , updating , deleting data, and fetching data from tables are the basic functionality of the modal in Cake PHP
 
 Creating any table in DB, following conventions should be followed
 
@@ -81,6 +81,7 @@ The model class starts with following conventions
         //Method Comments
             public function objectName ()
             {
+                // your logic goes here
             }
         }
     ?>
@@ -120,8 +121,117 @@ Following are the conventions to be followed while creating any action
         /*Method Comments*/
             public function actionName()
             {
+                //Your functionality goes here
             }
         }
     ?>
     ```
+
+<h3>Working with Components</h3>
+Components are the common set of code which helps controller to perform certain functionality. The class written in component can be used in any controller. The component can be used in controller by calling it at the top. Lets take a look at this
+
+    #app/Controller/Component/ComponentName.php
+
+    ```Php
+    <?php
+
+       /**
+        * @Component details
+        * @author details
+        */
+        class ComponentNameComponent extends Component {
+
+        /*All public variables here*/
+
+        /*Method Comments*/
+            public function objectName()
+            {
+                //Your functionality goes here
+
+
+            }
+        }
+    ?>
+    ```
+
+In above, we have declared a variable as $component which include th component in that controller. The component written in Component folder in side the controller.
+Following are the conventions needs to be followed while creating a component
+1. Component name should define it purpose and should be meaningful.
+2. The purpose of writing any component should be strong. It should be reusable in other functionality of controller.
+3. It should not be controller specific.
+4. Component should contain its purpose of creation at the beginning code in comment. With all details of author and file
+5. The object name should be meaningful so that any other developer can get it easily.
+6. Let take an example of File upload component, how I will write this
+
+    #app/Controller/Component/FileUpload.php
+
+    ```Php
+    <?php
+        /**
+            File upload component
+         * @purpose : To upload files on server
+         * @Author : Name of the coder (www.weboniselab.com)
+         * @createdOn : DateOfCreation         *
+         * @copyright : Licencing goes here
+         *
+         * */
+
+        class FileUploadComponent extends Component
+        {
+
+            //All public variables here
+
+            //Object comments here
+
+            public function uploadFile(/*All Parameters here in variable*/)
+            {
+
+                // File upload logic goes here
+
+                 return /*upload status*/
+            }
+
+        }
+    ?>
+    ```
+
+In above, we have created a file upload component which uploads the file on server in specific folder.
+Now, how we are going to use it in controller where I want upload a file. Lets take an another example.
+
+Suppose, I want to upload an image of user. So I will do my functionality in "UsersController.php". Lets take a look.
+
+    #app/Controller/Component/FileUpload.php
+
+    ```Php
+    <?php
+         App::uses('AppController', 'Controller');
+
+         /**
+         * @name : UsersController
+         * @author: Name of coder
+         * @CreatedON : DateOfCreation
+         * @purpose : To do all user related functionality
+         */
+         class ControllerNameController extends AppController {
+
+            //to include component create public variable as $component which should be written as it is.
+              public $component = array('FileUpload');
+
+            /*In specific action I want to upload a file, say it signUp*/
+
+             public function sign_up(){
+
+                //With all logic goes here, I will call the component
+
+                $isUploaded = $this->FileUpload->uploadFile(/*all file parameters here*/);
+
+                /*then next logic according to the upload status goes here*/
+             }
+         }
+    ?>
+
+
+By above example, we can see that how we have called a component in controller and used it. 
+
+
 
