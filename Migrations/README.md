@@ -15,7 +15,9 @@ To download the Migrations Plugin, [Go Here](https://github.com/CakeDC/migration
 
 ### Creating a migration ###
 
-	cake Migrations.migration generate
+Go to Project's app directory from the terminal and type the following command:
+
+	Console/cake Migrations.migration generate
 
 This will create a new file with the name that you specified in the app/Config/Migration folder.
 To create the migration file manually skip the databse to schema comparison if asked.
