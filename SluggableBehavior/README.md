@@ -17,14 +17,13 @@ Quick overview:
 
 Add the behaviour to your CakePHP model(s):
 
-    ```Php
 public $actsAs = array('Sluggable.Sluggable' => array(
        'label' => 'name',
        'slug' => 'slug',
        'separator' => '-',
        'overwrite' => true
     ));
-    ```
+
 
 How to use a slug in view for redirection:
 
