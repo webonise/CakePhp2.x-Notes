@@ -24,9 +24,9 @@ _We can upload image or any other file/files using ‘File Upload Component’  
 
     Ex: If you are creating user form then
 
-Eg.
     ```Php
    echo $this->Form->create(‘User’,array(‘type’=>’file’));
+   
     ```
 
 * Take field ‘file’ in your view part.
@@ -51,7 +51,7 @@ Eg.
             [size] => 34635
             )
         )
-    ```
+   ```
 
 
 
@@ -87,7 +87,8 @@ Eg.
     class AppController extends Controller {
          public $permitted = array('image/jpeg', 'image/jpg', 'image/jpe_', 'image/pjpeg',
                     'image/jpeg', 'image/jpg',  'image/pjpeg', 'image/pipeg'...');
-                    ```
+
+    ```
 
 
 
@@ -96,10 +97,11 @@ Eg.
      Ex:
     After uploading file you will use method
 
-```Php
+   ```Php
    $this->FileUpload->uploadFiles('img/UserImage', $this->request->data[‘User’]['image']
                 , null, $this->permitted, false);
-                ```
+
+   ```
 
      So it will save image inside folder ‘app/webroot/img/UserImage’ having name ‘pic.gif’
 
