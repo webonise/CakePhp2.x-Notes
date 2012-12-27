@@ -154,8 +154,7 @@ Components are the common set of code which helps controller to perform certain 
     ?>
     ```
 
-In above, we have declared a variable as $component which include th component in that controller. The component written in Component folder in side the controller.
-Following are the conventions needs to be followed while creating a component
+In above, we have declared a variable as $component which include th component in that controller. The component written in Component folder in side the controller.Following are the conventions needs to be followed while creating a component
 1. Component name should define it purpose and should be meaningful.
 2. The purpose of writing any component should be strong. It should be reusable in other functionality of controller.
 3. It should not be controller specific.
