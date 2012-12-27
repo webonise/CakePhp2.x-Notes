@@ -84,3 +84,55 @@ The up part is where you write the code for creating tables,adding columns,updat
             'profiles'
             )
 		)
+
+#### Syntax for Rename Table ####
+
+Changes the name of a table in the database.
+
+	'rename_table' => array(
+		'user' => 'users',
+		'profile' => 'profiles'
+	)
+
+#### Syntax for Create Field ####
+
+Create Field is used to add fields to an existing table in the schema.
+
+	'create_field' => array(
+		'users' => array(
+			'created' => array(
+				'type' => 'datetime'),
+			'modified' => array(
+				'type' => 'datetime')
+		)
+	)
+
+#### Syntax for Drop Field ####
+
+Drop field is used for removing fields from existing tables in the schema.
+	'drop_field' => array(
+		'users' => array(
+			'created',
+			'modified'),
+	)
+
+#### Syntax for Alter Field ####
+
+Changes the field properties in an existing table.
+
+	'alter_field' => array(
+		'users' => array(
+		    'id' => array(
+			'length' => 11),
+		)
+	)
+
+#### Syntax for Rename Field ####
+
+Changes the name of a field on a specified table in the database.
+
+	'rename_field' => array(
+		'users' => array(
+			'name' => 'user_name'
+		),
+	)
