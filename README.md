@@ -26,3 +26,4 @@ Note that git will not ignore a file that was already tracked before a rule was 
 * [Developing Cake PHP 2.x applications]()
 * [Image Magick](https://github.com/webonise/CakePhp2.x-Notes/blob/master/ImageMagick/README.md)
 * [Cake DC Migrations](https://github.com/webonise/CakePhp2.x-Notes/tree/master/Migrations).
+* [Ajax-File-Upload-Component](https://github.com/webonise/CakePhp2.x-Notes/tree/master/AjaxFileUploadComponent).
