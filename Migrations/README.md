@@ -11,4 +11,3 @@ To download the Migrations Plugin, [Go Here](https://github.com/CakeDC/migration
 - To use the Plugin,you have to load it by adding a line in your app/Config/bootstrap.php file.
 
     CakePlugin::load('Migrations');
-
