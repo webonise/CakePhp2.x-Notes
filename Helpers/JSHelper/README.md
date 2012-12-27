@@ -5,16 +5,16 @@ Helpers are the component-like classes for the presentation layer of your applic
 
 # Core Helpers in Cake PHP
 
-A **CacheHelper** assists in caching entire layouts and views, saving time repetitively retrieving data.
-A **FormHelper** does most of the heavy lifting in form creation.
-A **HtmlHelper** in CakePHP is to make HTML-related options easier, faster, and more resilient to change.
-A **JsHelper** is an Adapter based helper, and included 3 of the most requested libraries. Prototype/Scriptaculous, Mootools/Mootools-more, and jQuery/jQuery UI.
-A **NumberHelper** contains convenience methods that enable display numbers in common formats in your views.
-A **Paginator** is used to output pagination controls such as page numbers and next/previous links.
-A **RSS**  makes generating XML for RSS feeds easy.
-A **SessionHelper** replicates most of the Session components functionality and makes it available in your view.
-A **TextHelper**  contains methods to make text more usable and friendly in your views.
-A **TimeHelper** does what it says on the tin: saves you time. It allows for the quick processing of time related information.
+* A **CacheHelper** assists in caching entire layouts and views, saving time repetitively retrieving data.
+* A **FormHelper** does most of the heavy lifting in form creation.
+* A **HtmlHelper** in CakePHP is to make HTML-related options easier, faster, and more resilient to change.
+* A **JsHelper** is an Adapter based helper, and included 3 of the most requested libraries. Prototype/Scriptaculous, Mootools/Mootools-more, and jQuery/jQuery UI.
+* A **NumberHelper** contains convenience methods that enable display numbers in common formats in your views.
+* A **Paginator** is used to output pagination controls such as page numbers and next/previous links.
+* A **RSS**  makes generating XML for RSS feeds easy.
+* A **SessionHelper** replicates most of the Session components functionality and makes it available in your view.
+* A **TextHelper**  contains methods to make text more usable and friendly in your views.
+* A **TimeHelper** does what it says on the tin: saves you time. It allows for the quick processing of time related information.
 
 
 ## More Information about JsHelper
@@ -24,36 +24,42 @@ As stated above **JSHelper** is an Adapter based helper, and included 3 of the m
 While using the JSHelper first of all you'll have to download your preferred javascript library and place it in app/webroot/js. Then you must include the library in your page.
 
 Javascript engine selection is declared when you include the helper in your controller:
-    **public $helpers = array('Js' => array('Jquery'));**
+
+        **public $helpers = array('Js' => array('Jquery'));**
+
 The above would use the Jquery Engine in the instances of JsHelper in your views. If you do not declare a specific engine, the jQuery engine will be used as the default.
 
 
 ## Using the JsHelper inside customHelpers
 
 Declare the JsHelper in the $helpers array in your customHelper:
+
     **public $helpers = array('Js');**
 
 If you are willing to use an other javascript engine than the default, do the helper setup in your controller as follows:
-**public $helpers = array(
-    'Js' => array('Prototype'),
-    'CustomHelper'
-);**
+
+    **public $helpers = array(
+        'Js' => array('Prototype'),
+        'CustomHelper'
+    );**
 
 
 ## Javascript engine usage
 
 Since most methods in Javascript begin with a selection of elements in the DOM, $this->Js->get() returns a **$this**, allowing you to chain the methods using the selection. Method chaining allows you to write shorter, more expressive code:
 
-**$this->Js->get('#foo')->event('click', $eventCode);**
+    **$this->Js->get('#foo')->event('click', $eventCode);**
 
-**OR**
+    **OR**
 
-**$this->Js->get('#foo');
-$this->Js->event('click', $eventCode);**
+    **$this->Js->get('#foo');
+
+    $this->Js->event('click', $eventCode);**
+
 
 ## Working with buffered scripts
 
-It is recommended that you place $this->Js->writeBuffer() at the bottom of your layout file above the </body> tag. This will allow all scripts generated in layout elements to be output in one place. It should be noted that buffered scripts are handled separately from included script files.
+It is recommended that you place $this->Js->writeBuffer() at the bottom of your layout file above the body tag. This will allow all scripts generated in layout elements to be output in one place. It should be noted that buffered scripts are handled separately from included script files.
 
 **JsHelper::writeBuffer($options = array())**
 
@@ -93,7 +99,7 @@ Generate a javascript snippet to create an XmlHttpRequest or ‘AJAX’ request.
 * data - Additional data to send.
 * update - Dom id to update with the content of the request.
 * type - Data type for response. ‘json’ and ‘html’ are supported. Default is html for most libraries.
-* evalScripts - Whether or not <script> tags should be eval’ed.
+* evalScripts - Whether or not script tags should be eval’ed.
 * dataExpression - Should the data key be treated as a callback. Useful for supplying $options['data'] as another Javascript expression.
 
 
