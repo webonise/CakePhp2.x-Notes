@@ -7,6 +7,7 @@ This is not a backup tool, however you can make use of callbacks if you want to 
 
 To download the Migrations Plugin, [Go Here](https://github.com/CakeDC/migrations).
 
+- Copy the Git Read-Only access.
 - Clone the plugin into your app/Plugin folder.
 - To use the Plugin,you have to load it by adding a line in your app/Config/bootstrap.php file.
 
@@ -136,3 +137,18 @@ Changes the name of a field on a specified table in the database.
 			'name' => 'user_name'
 		),
 	)
+
+### Running the migrations ###
+
+The migration you have created will haelp you to complete the task written in it through Cake console.
+Go to the terminal and go to your Project's app/ directory.
+Write the following command:
+
+    Console/cake Migrations.migration run up
+
+You will be asked which version to you want to run.
+Give your migration version and press enter.
+
+### Need more help? ###
+
+Go to [Cake DC Migrations](https://github.com/CakeDC/migrations).
