@@ -9,7 +9,7 @@
 
 ## Basic requirement :- ##
 
-** Your database table needs 3 fields **,
+#####Your database table needs 3 fields ######,
 
     -    parent      : To store the id of parent object .(default:parent_id)
 
@@ -17,8 +17,7 @@
 
     -    right         : To store the right value of current row(Default :rght).
 
-** Adding your data**
-
+##Adding your data##
 
 ## Deleting your data ##
 
@@ -78,6 +77,7 @@ Parameters:
 ###getPath($id = null, $fields = null, $recursive = null)###
 
 Parameters :
+
     $id - Primary id of that row
     $fields - (Default : NULL) -Single string field name or array of fields to include in the return
     $recursive -(Default : NULL) - The number of levels deep to fetch associated record.(optional)

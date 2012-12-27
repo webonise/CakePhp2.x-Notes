@@ -1,4 +1,4 @@
-				        <h1>CODING CONVENTIONS IN CAKEPHP</h1>
+<h1>CODING CONVENTIONS IN CAKEPHP</h1>
 
 The Cake PHP is one of the PHP framework created in MVC architecture. It follows all MVC conventions in coding.  Cakse PHP consist of three layers.
 1. Model
@@ -8,7 +8,7 @@ Lets take a look at following coding conventions in CakePHP
 
 <h3>MODEL</h3>
 
-	Modals are mostly responsible for data fetching and associations. But it is not all of its functionality. It is also responsible for the business logic of the apllication. All the business login is been handled in modal side of the code. Creating associations, saving , updating and  deleting data, and fetching data from tables are the basic functionalities of the modal in Cake PHP
+Modals are mostly responsible for data fetching and associations. But it is not all of its functionality. It is also responsible for the business logic of the apllication. All the business login is been handled in modal side of the code. Creating associations, saving , updating and  deleting data, and fetching data from tables are the basic functionalities of the modal in Cake PHP
 
 Creating any table in DB, following conventions shoud be followed
 
@@ -25,8 +25,9 @@ Creating any table in DB, following conventions shoud be followed
 
 <h3>Creating Model :</h3>
 
-	In cake PHP. Model represents the table. We create model to perform table related activities.
+In cake PHP. Model represents the table. We create model to perform table related activities.
 Following are the conventions to be followed while creating any model
+
 1. The name of the model shoud be in camel case letters starting with capital letter.
 2. Model name is table name in singular form .
 3. The file name of model shoud be in camel case letters.
@@ -37,12 +38,14 @@ User.php
 7. If model name is having two words the file name will be joined two words but the next word should start with capital letter
 8. Eg. GuestUser.php , UserDetail.php, etc
 
-Working with Model :
-	As I said earlier, model resprsents the table and also describe the business logic. Hence it is very important to write clean and meaning full code.
+<h3>Working with Model :</h3>
+
+As I said earlier, model resprsents the table and also describe the business logic. Hence it is very important to write clean and meaning full code.
 The model class starts with following convetions
+
 1. After starting PHP tags, allways write the comments about the file. It must contain the liscencing details, Auther details, purpose of creation of file and the created date.
 2. Include parent class at top i.e
- 'App::uses('AppModel', 'Model');'
+   ``'App::uses('AppModel', 'Model');'``
 3. The model class name shoud be the model name with all above convetions for model name.
 4. Model class should extends to the parent class i.e. AppModel
 5. Define all the global variables at the begining of the code.
@@ -55,7 +58,7 @@ The model class starts with following convetions
 12.  Keep Proper Relations with associated models
 13.  Keep validations for required fields.
 14. Eg.
-
+    ```Ruby
     <?php
         App::uses('AppModel', 'Model');
         //Comments
@@ -68,7 +71,7 @@ The model class starts with following convetions
             }
         }
     ?>
+    ```
 
-
-CONTROLLER
-	Controller in Cake PHP are responsible for handling processing part of the application. It is a middle layer between modal and view.
+<h3>CONTROLLER</h3>
+Controller in Cake PHP are responsible for handling processing part of the application. It is a middle layer between modal and view.
