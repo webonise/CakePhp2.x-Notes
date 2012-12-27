@@ -58,7 +58,9 @@ The model class starts with following convetions
 12.  Keep Proper Relations with associated models
 13.  Keep validations for required fields.
 14. Eg.
-    ```Ruby
+    #app/Model/ModelName.php
+
+    ```Php
     <?php
         App::uses('AppModel', 'Model');
         //Comments
