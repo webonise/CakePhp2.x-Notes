@@ -162,26 +162,37 @@ In above, we have declared a variable as $component which include th component i
 5. The object name should be meaningful so that any other developer can get it easily.
 6. Let take an example of File upload component, how I will write this
 
-    #app/Model/ModelName.php
+    #app/Controller/Component/FileUpload.php
 
-        ```Php
-        <?php
-            App::uses('AppModel', 'Model');
-            /**
-            * @modal details
-            * @author details
-            */
-            class ModelName extends AppModel {
-            //Associations here
-            //Validations here
-            //Method Comments
-                public function objectName ()
-                {
-                    // your logic goes here
-                }
+    ```Php
+    <?php
+        /**
+            File upload component
+         * @purpose : To upload files on server
+         * @Author : Name of the coder (www.weboniselab.com)
+         * @createdOn : DateOfCreation         *
+         * @copyright : Licencing goes here
+         *
+         * */
+
+        class FileUploadComponent extends Component
+        {
+
+            //All public variables here
+
+            //Object comments here
+
+            public function uploadFile(/*All Parameters here in variable*/)
+            {
+
+                // File upload logic goes here
+
+                 return /*upload status*/
             }
-        ?>
-        ```
+
+        }
+    ?>
+    ```
 
 In above, we have created a file upload component which uploads the file on server in specific folder.Now, how we are going to use it in controller where I want upload a file. Lets take an another example.Suppose, I want to upload an image of user. So I will do my functionality in "UsersController.php". Lets take a look
 
