@@ -10,7 +10,9 @@ Swiftmailer component offering a flexible  approach to sending emails with a mul
 
 ## Usage  ##
 -First, download [SwiftMailer](http://swiftmailer.org/), and place it under vendors/SwiftMailer.
--Add the plugin to your app/Config/bootstrap.php using `CakePlugin::loadAll().
+-Add the plugin to your app/Config/bootstrap.php using:
+
+    CakePlugin::loadAll().
 
 ## Create SwiftMailer Component ##
 
@@ -31,11 +33,13 @@ and we have to use this template while sending email.following is the example of
     <br/>
 Here we can use php variables values as well.
 
-## sending a mail ##
+## Sending a mail ##
 
 Once we have created templet for email.we can send this template via email.for that we have to use SwiftMailer Component.
  -First include your component in to our AppController.
-        public $components = array('SwiftMailer');
+
+    public $components = array('SwiftMailer');
+    
  -Now, use Swiftmailer Components send method to send email with a data.format of data array is:
 
     $data['from'] = from email;
