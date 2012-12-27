@@ -25,7 +25,7 @@ There are two main parts created in the migration file.
 The 'up' and the 'down' part.
 The up part is where you write the code for creating tables,adding columns,updating tables etc. and in the down part code to do exact opposite as in the up part is written like drop tables.
 
-#### Syntax for Creating Table ####
+#### Syntax for Creating Tables ####
 
     'up' => array(
 	    'create_table' => array(
@@ -73,5 +73,14 @@ The up part is where you write the code for creating tables,adding columns,updat
 					    'unique' => 1)
 			        )
 		        )
-	        );
+	        )
         )
+
+#### Syntax for Dropping Tables ####
+
+    'down' => array(
+        'drop_table' => array(
+            'users',
+            'profiles'
+            )
+		)
