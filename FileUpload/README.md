@@ -49,9 +49,16 @@ Eg.
 
 * FileUploadComponent has method
 
-    `function uploadFiles($folder, $formdata, $itemId = null, $permitted, $multifile = false) {
-    //.....
-    }`
+14. Eg.
+    #app/Model/ModelName.php
+
+    ```Php
+    function uploadFiles($folder, $formdata, $itemId = null, $permitted, $multifile = false) {
+        //.....
+        }
+    ```
+
+
 
 
     you can use this method to uload file.
