@@ -27,6 +27,7 @@ Creating any table in DB, following conventions shoud be followed
 
 In cake PHP. Model represents the table. We create model to perform table related activities.
 Following are the conventions to be followed while creating any model
+
 1. The name of the model shoud be in camel case letters starting with capital letter.
 2. Model name is table name in singular form .
 3. The file name of model shoud be in camel case letters.
@@ -38,11 +39,13 @@ User.php
 8. Eg. GuestUser.php , UserDetail.php, etc
 
 <h3>Working with Model :</h3>
+
 As I said earlier, model resprsents the table and also describe the business logic. Hence it is very important to write clean and meaning full code.
 The model class starts with following convetions
+
 1. After starting PHP tags, allways write the comments about the file. It must contain the liscencing details, Auther details, purpose of creation of file and the created date.
 2. Include parent class at top i.e
- 'App::uses('AppModel', 'Model');'
+   ``'App::uses('AppModel', 'Model');'``
 3. The model class name shoud be the model name with all above convetions for model name.
 4. Model class should extends to the parent class i.e. AppModel
 5. Define all the global variables at the begining of the code.
