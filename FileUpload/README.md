@@ -22,6 +22,11 @@ _We can upload image or any other file/files using ‘File Upload Component’  
 
     Ex: If you are creating user form then
 
+Eg.
+    ```Ruby
+   echo $this->Form->create(‘User’,array(‘type’=>’file’));
+    ```
+
     echo $this->Form->create(‘User’,array(‘type’=>’file’));
 
 * Take field ‘file’ in your view part.
