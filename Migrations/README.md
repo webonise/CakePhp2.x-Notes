@@ -78,6 +78,7 @@ The up part is where you write the code for creating tables,adding columns,updat
 	        )
         )
 
+
 #### Syntax for Dropping Tables ####
 
     'down' => array(
