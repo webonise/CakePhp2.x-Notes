@@ -1,7 +1,7 @@
-    <h1>TREE BEHAVIOR</h1>
+#TREE BEHAVIOR
 
     ------------------------------------------------------------------------------
-    <h3>Cake php Tree behavior</h3>
+    # Cake php Tree behavior
     ------------------------------------------------------------------------------
     - CakePHP Tree Behavior is very useful in creating a hierarchical data.
     - Tree behavior is based on MPTT logic.
