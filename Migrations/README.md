@@ -7,7 +7,8 @@ This is not a backup tool, however you can make use of callbacks if you want to 
 
 To download the Migrations Plugin, [Go Here](https://github.com/CakeDC/migrations).
 
--Clone the plugin into your app/Plugin folder.
--To use the Plugin,you have to load it by adding a line in your app/Config/bootstrap.php file.
+- Clone the plugin into your app/Plugin folder.
+- To use the Plugin,you have to load it by adding a line in your app/Config/bootstrap.php file.
+
     CakePlugin::load('Migrations');
 
