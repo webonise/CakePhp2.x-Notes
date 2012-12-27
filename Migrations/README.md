@@ -142,14 +142,14 @@ Changes the name of a field on a specified table in the database.
 
 ### Running the migrations ###
 
-The migration you have created will haelp you to complete the task written in it through Cake console.
-Go to the terminal and go to your Project's app/ directory.
+The migration you have created will help you to complete the task written in it through Cake console.
+Go to your Project's app/ directory from the terminal.
 Write the following command:
 
     Console/cake Migrations.migration run up
 
-You will be asked which version to you want to run.
-Give your migration version and press enter.
+You will be asked which version do you want to run.
+Give your migration's version and press enter.
 
 ### Need more help? ###
 
