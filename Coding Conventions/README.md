@@ -87,6 +87,7 @@ The model class starts with following conventions
 <h3>CONTROLLER</h3>
 Controller in Cake PHP are responsible for handling processing part of the application. It is a middle layer between modal and view. The controller handles the logic between model and view and post it to view for display. The object we create in it are called as “Actions”.
 Following are the conventions to be followed while creating any action
+
 1. Controller name should be meaningful and in camel case format.
 2. The controller class should be extended to its parent class, i.e. AppController.
 3. The object we create and call in url are call action hence there name should be meaningful.
@@ -101,7 +102,7 @@ Following are the conventions to be followed while creating any action
 12. Error and exceptions should have been handled properly.
 13. Eg 
 
-#app/Controller/ControllerName.php
+    #app/Controller/ControllerName.php
 
     ```Php
     <?php
