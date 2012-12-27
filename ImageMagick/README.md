@@ -5,11 +5,12 @@ There are couple of ways to do it via PHP.
 The most known one which we use very often while development is, by the use of Image Magick Library.
 
 ## Minimal requirement :
-*   As this is PHP team's code snippet section, one should have the LAMP installed in place; for which you can follow the below give link,
+* As this is PHP team's code snippet section, one should have the LAMP installed in place; for which you can follow the below give link,
 
-*   PHP LAMP Installation
-
-or one can follow the shell script for PHP dev environment - click here
+* [PHP LAMP Installation][installation]
+[installation]: https://sites.google.com/a/weboniselab.com/php-team/lamp-installation
+* or one can follow the shell script for PHP dev environment - [click here][env]
+[env]: http://www.google.com/url?q=https%3A%2F%2Fgist.github.com%2F81d5c4cd30b58554ac71&sa=D&sntz=1&usg=AFrqEzee5owHXLD1SnPDc9_di3_k1GjyZw
 
 * Another prior requirement is that Image Magick has to be installed in your system with php.
 
@@ -20,9 +21,7 @@ or one can follow the shell script for PHP dev environment - click here
 After uploading the file to Local Server (i.e Apache), pass the physical path of the file to be resized to ImageMagick, followed with the dimensions and the path to resized file.
 
 
-    ```Ruby
-          $this->ImageMagick->resize([FILE_PATH] , [WIDTH] , [HEIGHT] , [TAG] , [CACHED_FILE_PATH] , [QUALITY] , [PHYSICAL_PATH_OF_THE_FILE_TO_BE_RESIZED] );
-    ```Ruby
+      $this->ImageMagick->resize([FILE_PATH] , [WIDTH] , [HEIGHT] , [TAG] , [CACHED_FILE_PATH] , [QUALITY] , [PHYSICAL_PATH_OF_THE_FILE_TO_BE_RESIZED] );
 
 Usually, Tag is kept as TRUE and Quality is kept as 100;for a better quality image after resizing.
 I hope this helps. Please feel free to add/edit the post, as per convenience.
