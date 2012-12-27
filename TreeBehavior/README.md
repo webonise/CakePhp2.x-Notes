@@ -43,10 +43,10 @@ Parameters:
 
 ###childCount($id = null, $direct = false)###
 
- This method is used 2 parameters,
+ This method is used 2 parameters:
 
- `$id - Primary key value of row.
- $direct - It is optional and used to whether or not only directed children count.`
+    $id - Primary key value of row.
+    $direct - It is optional and used to whether or not only directed children count.
 
  - This method will return children associated with this $id.
  - If we set $direct =true.. it will give the direct descendants.
@@ -65,15 +65,24 @@ Parameters:
     $spacer – The string to use in front of each item to indicate depth.(optional)
     $recursive – The number of levels deep to fetch associated record.(optional)
 
-Use: This method is used to generate tree list
+*Use:* This method is used to generate tree list
         if we specify the parameters it will generate according to condition
         if we are not specifying parameter then it will generate the tree from root node i.e parent node.
 
 ###getParentNode###
 
     This method will return parent node if parent is not present then it will return false i.e there is no parent
-    ` $parent = $this->Category->getParentNode(2); //<- id for fun
-      // $parent contains All categories `
+     $parent = $this->Category->getParentNode(2); //<- id for fun
+      // $parent contains All categories
 
 ###getPath($id = null, $fields = null, $recursive = null)###
+
+Parameters :
+    $id - Primary id of that row
+    $fields - (Default : NULL) -Single string field name or array of fields to include in the return
+    $recursive -(Default : NULL) - The number of levels deep to fetch associated record.(optional)
+
+    This will return the entire path from $id to parent id.
+    $parents = $this->Category->getPath(15);
+
 
