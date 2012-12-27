@@ -9,13 +9,13 @@ _We can upload image or any other file/files using ‘File Upload Component’  
 
     Ex: If you are uploading file in any method in ‘UsersController’ then
 
-    class UsersController extends AppController{
+    `class UsersController extends AppController{
 
     public $component=array(‘FileUpload’);
 
     //...
 
-    }
+    }`
 
 * Specify Form type to ‘file’. Specifying ‘file’ changes the form submission method to ‘post’, and
     includes an enctype of “multipart/form-data” on the form tag.
@@ -23,21 +23,19 @@ _We can upload image or any other file/files using ‘File Upload Component’  
     Ex: If you are creating user form then
 
 Eg.
-    ```Ruby
+    `
    echo $this->Form->create(‘User’,array(‘type’=>’file’));
-    ```
-
-    echo $this->Form->create(‘User’,array(‘type’=>’file’));
+    `
 
 * Take field ‘file’ in your view part.
     Ex:
-    echo $this->Form->file(‘User.image’);
+    `echo $this->Form->file(‘User.image’);`
 
     Upon submission, file fields provide an expanded data array to the script receiving the form data.
 
     In $this->request->data you will get information about the uplaoded file like
 
-    [User]
+`[User]
 (
   [image]=>array
     (
@@ -47,13 +45,13 @@ Eg.
       [error] => 0
       [size] => 34635
     )
-)
+)`
 
 * FileUploadComponent has method
 
-    function uploadFiles($folder, $formdata, $itemId = null, $permitted, $multifile = false) {
+    `function uploadFiles($folder, $formdata, $itemId = null, $permitted, $multifile = false) {
     //.....
-    }
+    }`
 
 
     you can use this method to uload file.
@@ -72,9 +70,9 @@ Eg.
 	     This can include in AppController.
      Ex: For image you can include like
 
-    class AppController extends Controller {
+    `class AppController extends Controller {
          public $permitted = array('image/jpeg', 'image/jpg', 'image/jpe_', 'image/pjpeg',
-                    'image/jpeg', 'image/jpg',  'image/pjpeg', 'image/pipeg'...');
+                    'image/jpeg', 'image/jpg',  'image/pjpeg', 'image/pipeg'...');`
 
 
 
@@ -83,8 +81,8 @@ Eg.
      Ex:
     After uploading file you will use method
 
-    $this->FileUpload->uploadFiles('img/UserImage', $this->request->data[‘User’]['image']
-                , null, $this->permitted, false);
+   ` $this->FileUpload->uploadFiles('img/UserImage', $this->request->data[‘User’]['image']
+                , null, $this->permitted, false);`
 
      So it will save image inside folder ‘app/webroot/img/UserImage’ having name ‘pic.gif’
 
