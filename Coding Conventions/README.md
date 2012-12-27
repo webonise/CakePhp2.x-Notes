@@ -103,7 +103,7 @@ Following are the conventions to be followed while creating any action
 10. Avoid repetition of code.
 11. All variables  name should be in camel case and initialised at the top.
 12. Error and exceptions should have been handled properly.
-13. Eg 
+13. Eg
 
     #app/Controller/ControllerName.php
 
@@ -128,7 +128,7 @@ Following are the conventions to be followed while creating any action
     ```
 
 <h3>Working with Components</h3>
-Components are the common set of code which helps controller to perform certain functionality. The class written in component can be used in any controller. The component can be used in controller by calling it at the top. Lets take a look at this
+Components are the common set of code which helps controller to perform certain functionality. The class written in component can be used in any controller. The component can be used in controller by calling it at the top. Lets take a look at this.
 
     #app/Controller/Component/ComponentName.php
 
@@ -161,7 +161,7 @@ Following are the conventions needs to be followed while creating a component
 3. It should not be controller specific.
 4. Component should contain its purpose of creation at the beginning code in comment. With all details of author and file
 5. The object name should be meaningful so that any other developer can get it easily.
-6. Let take an example of File upload component, how I will write this
+6. Let take an example of File upload component, how I will write this.
 
     #app/Controller/Component/FileUpload.php
 
@@ -197,7 +197,6 @@ Following are the conventions needs to be followed while creating a component
 
 In above, we have created a file upload component which uploads the file on server in specific folder.
 Now, how we are going to use it in controller where I want upload a file. Lets take an another example.
-
 Suppose, I want to upload an image of user. So I will do my functionality in "UsersController.php". Lets take a look.
 
     #app/Controller/Component/FileUpload.php
@@ -231,7 +230,7 @@ Suppose, I want to upload an image of user. So I will do my functionality in "Us
     ?>
 
 
-By above example, we can see that how we have called a component in controller and used it. 
+By above example, we can see that how we have called a component in controller and used it.
 
 
 
