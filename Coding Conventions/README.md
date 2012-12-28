@@ -10,7 +10,7 @@ Before we start with any type of coding conventions, I would prefer to go throug
 
 The Cake PHP is one of the PHP framework created in MVC architecture. It follows all MVC conventions in coding.  Cake PHP consist of three layers.
 
-![alt MVC](/Model-View-Controller-Architecture.png "MVC")
+<p><img src="Model-View-Controller-Architecture.png" alt="alt MVC" title="" /></p>
 
 1. [Model](https://github.com/webonise/CakePhp2.x-Notes/tree/master/Coding%20Conventions#model)
 
