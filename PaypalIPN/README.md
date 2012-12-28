@@ -20,8 +20,8 @@ $payment_infos = array(
 </pre>
 
 <h4>In helper :</h4>
-/* Change these URLs according to your application */
 <pre>
+/* Change these URLs according to your application */
    $paypalObj->add_field('return', "http://" . $_SERVER['SERVER_NAME'] . "/store/products/handleIPN?state=success");
    $paypalObj->add_field('notify_url', "http://" . $_SERVER['SERVER_NAME'] . "/store/products/handleIPN?state=success");
    $paypalObj->add_field('cancel_return', "http://" . $_SERVER['SERVER_NAME']); // . "/payments/handleIPN?state=cancel");
@@ -34,4 +34,4 @@ $payment_infos = array(
                 }
 </pre>
 <br>
-Page will redirect to paypal site. 
+Page will redirect to paypal site.
