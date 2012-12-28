@@ -300,20 +300,27 @@ We store view related files in ``.ctp`` format.
                 echo $this->Html->css('cake.generic');
 
                 echo $this->fetch('meta');
-                echo $this->fetch('css');
+                //All css files here
+                $this->Html->css(array(/*all css file in array without extension*/));
+                 echo $this->fetch('css');
+
+                //All Js libraries here
+                $this->Html->script(array(/*all JS file in array without extension*/));
                 echo $this->fetch('script');?>
         </head>
         <body>
             <div id="container">
+               <!-- Header -->
                 <div id="header">
                     <h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
                 </div>
                 <div id="content">
-
+                    <!--All flash messages will go here-->
                     <?php echo $this->Session->flash(); ?>
-
+                    <!--All the contents of the view other than header and footer will come here-->
                     <?php echo $this->fetch('content'); ?>
                 </div>
+                <!-- Footer-->
                 <div id="footer">
                     <?php echo $this->Html->link(
                             $this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
@@ -323,6 +330,7 @@ We store view related files in ``.ctp`` format.
                     ?>
                 </div>
             </div>
+            <!-- This displays all the sql queries here. Can be disabled by making Debug mode '0' in app/Config/core.php-->
             <?php echo $this->element('sql_dump'); ?>
         </body>
         </html>
