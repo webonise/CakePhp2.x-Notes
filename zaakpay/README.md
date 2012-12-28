@@ -1,3 +1,5 @@
+http://bakery.cakephp.org/articles/kvijay/2012/05/20/zaakpay_payment_gateway_component
+
 This is another component that is get used for ZaakPay payment gateway.
 
 Some info about zaak pay : http://www.zaakpay.com/ Zaak pay is the payment gateway that operate inside india. It is very easy to integrate this payment gateway with your e-commerce application. There are some steps that you need to follow,
