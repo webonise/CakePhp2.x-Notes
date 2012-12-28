@@ -134,16 +134,15 @@ Components are the common set of code which helps controller to perform certain 
 
     ```Php
     <?php
-
-       /**
+        /**
         * @Component details
         * @author details
         */
         class ComponentNameComponent extends Component {
 
-        /*All public variables here*/
+            /*All public variables here*/
 
-        /*Method Comments*/
+            /*Method Comments*/
             public function objectName()
             {
                 //Your functionality goes here
@@ -201,29 +200,29 @@ In above, we have created a file upload component which uploads the file on serv
 
     ```Php
     <?php
-         App::uses('AppController', 'Controller');
-         /**
-         * @name : UsersController
-         * @author: Name of coder
-         * @CreatedON : DateOfCreation
-         * @purpose : To do all user related functionality
-         */
-         class ControllerNameController extends AppController {
+        App::uses('AppController', 'Controller');
+        /**
+        * @name : UsersController
+        * @author: Name of coder
+        * @CreatedON : DateOfCreation
+        * @purpose : To do all user related functionality
+        */
+        class ControllerNameController extends AppController {
 
             //to include component create public variable as $component which should be written as it is.
-              public $component = array('FileUpload');
+            public $component = array('FileUpload');
 
             /*In specific action I want to upload a file, say it signUp*/
 
-             public function sign_up(){
+            public function sign_up(){
 
                 //With all logic goes here, I will call the component
 
                 $isUploaded = $this->FileUpload->uploadFile(/*all file parameters here*/);
 
                 /*then next logic according to the upload status goes here*/
-             }
-         }
+            }
+        }
     ?>
 
 
