@@ -128,8 +128,7 @@ Following are the conventions to be followed while creating any action
     ```
 
 <h3>Working with Components</h3>
-Components are the common set of code which helps controller to perform certain functionality. The class written in component can be used in any controller. The component can be used in controller by calling it at the top. Lets take a look at this
-
+Components are the common set of code which helps controller to perform certain functionality. The class written in component can be used in any controller. The component can be used in controller by calling it at the top. Lets take a look at this.
     #app/Controller/Component/ComponentName.php
 
     ```Php
@@ -194,19 +193,22 @@ In above, we have declared a variable as $component which include th component i
     ?>
     ```
 
-In above, we have created a file upload component which uploads the file on server in specific folder.Now, how we are going to use it in controller where I want upload a file. Lets take an another example.Suppose, I want to upload an image of user. So I will do my functionality in "UsersController.php". Lets take a look
-
+In above, we have created a file upload component which uploads the file on server in specific folder.Now, how we are going to use it in controller where I want upload a file. Lets take an another example.Suppose, I want to upload an image of user. So I will do my functionality in "UsersController.php". Lets take a look.
     #app/Controller/Component/FileUpload.php
 
     ```Php
     <?php
+
         App::uses('AppController', 'Controller');
+
         /**
         * @name : UsersController
         * @author: Name of coder
         * @CreatedON : DateOfCreation
         * @purpose : To do all user related functionality
-        */
+        *
+        * */
+
         class ControllerNameController extends AppController {
 
             //to include component create public variable as $component which should be written as it is.
