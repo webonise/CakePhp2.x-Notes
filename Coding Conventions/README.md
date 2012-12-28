@@ -10,13 +10,13 @@ Before we start with any type of coding conventions, I would prefer to go throug
 
 The Cake PHP is one of the PHP framework created in MVC architecture. It follows all MVC conventions in coding.  Cake PHP consist of three layers.
 
-[Click Here To See : MVC Architecture][https://github.com/webonise/CakePhp2.x-Notes/blob/master/Coding%20Conventions/Model-View-Controller-Architecture.png "MVC"]
+[Click Here To See : MVC Architecture] (https://github.com/webonise/CakePhp2.x-Notes/blob/master/Coding%20Conventions/Model-View-Controller-Architecture.png)
 
 1. [Model](https://github.com/webonise/CakePhp2.x-Notes/tree/master/Coding%20Conventions#model)
 
 2. [View](https://github.com/webonise/CakePhp2.x-Notes/tree/master/Coding%20Conventions#view)
 
-3.[Controller](https://github.com/webonise/CakePhp2.x-Notes/tree/master/Coding%20Conventions#controller)
+3. [Controller](https://github.com/webonise/CakePhp2.x-Notes/tree/master/Coding%20Conventions#controller)
 
 Lets take a look at following coding conventions in CakePHP
 
