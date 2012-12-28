@@ -15,15 +15,27 @@ When I was working on my one project there is continues requirement to change em
 
 <p>Its required migration plugin in place to create required database table.</p>
 
+<h2>Downloading &amp; Installation</h2>
+
+<p>To download the Email Template management Plugin, <a href="https://github.com/madhavi-webonise/EmailTemplate">Go Here</a></p>
+
+<pre><code>Copy the Git Read-Only access.
+
+Clone the release2 branch for plugin into your app/Plugin folder.
+
+To use the Plugin,you have to load it by adding a line in your app/Config/bootstrap.php file.
+
+CakePlugin::load('EmailTemplate');
+
+Run the following command in the cake console to create the tables:
+@Console/cake Migrations.migration -plugin EmailTemplate.
+</code></pre>
+
 <h1>How to use</h1>
 
 <ol>
-<li><p>Download (https://github.com/madhavi-webonise/email<em>template/downloads ) or clone (https://github.com/madhavi-webonise/email</em>template ) the code for this plugin .</p></li>
-<li><p>Add the email_template folder into your "your-app-path/app/plugins" folder.</p></li>
-<li><p>Run the following command in the cake console to create the tables:
-@Console/cake Migrations.migration -plugin email_template.</p></li>
 <li><p>Now check the email templates list in your application.</p></li>
-<li><p>You can add more email templates from "your-app-url/email<em>template/email</em>templates/add".</p></li>
+<li><p>You can add more email templates from "your-app-url/EmailTemplate/EmailTemplates/add".</p></li>
 <li><p>you can check Constants list which you can use into email content to replace by real value by clicking "Email Constants" link from add or edit page.</p></li>
 <li><p>you can add more constants in "$emailconstants" array from EmailTemplateAppController with blank value. If we didn't provide for any constant in code then it will replace with black and it will not show direct constant in email.</p></li>
 <li><p>You can add same constant in "EmailTemplateController" with there one or two lines description Where and why we can use that constant.</p></li>
