@@ -9,9 +9,15 @@ Before we start with any type of coding conventions, I would prefer to go throug
 [Cake Book]: http://book.cakephp.org/2.0/en/index.html
 
 The Cake PHP is one of the PHP framework created in MVC architecture. It follows all MVC conventions in coding.  Cake PHP consist of three layers.
-1. Model
-2. View
-3. Controller
+
+![Click Here To See : MVC Architecture] (https://github.com/webonise/CakePhp2.x-Notes/blob/master/Coding%20Conventions/Model-View-Controller-Architecture.png)
+
+1. [Model](https://github.com/webonise/CakePhp2.x-Notes/tree/master/Coding%20Conventions#model)
+
+2. [View](https://github.com/webonise/CakePhp2.x-Notes/tree/master/Coding%20Conventions#view)
+
+3. [Controller](https://github.com/webonise/CakePhp2.x-Notes/tree/master/Coding%20Conventions#controller)
+
 Lets take a look at following coding conventions in CakePHP
 
 <h3>MODEL</h3>
@@ -128,16 +134,20 @@ Following are the conventions to be followed while creating any action
     ```
 
 <h3>Working with Components</h3>
-Components are the common set of code which helps controller to perform certain functionality. The class written in component can be used in any controller. The component can be used in controller by calling it at the top. Lets take a look at this.
+Components are the common set of code which helps controller to perform certain functionality. The class written in component can be used in any controller. The component can be used in controller by calling it at the top
+
+1. Lets take a look at this.
+
     #app/Controller/Component/ComponentName.php
 
     ```Php
     <?php
         /**
-        * @Component details
-        * @author details
-        */
-        class ComponentNameComponent extends Component {
+         * @Component details
+         * @author details
+         *
+         * */
+         class ComponentNameComponent extends Component {
 
             /*All public variables here*/
 
@@ -193,15 +203,18 @@ In above, we have declared a variable as $component which include th component i
     ?>
     ```
 
-In above, we have created a file upload component which uploads the file on server in specific folder.Now, how we are going to use it in controller where I want upload a file. Lets take an another example.Suppose, I want to upload an image of user. So I will do my functionality in "UsersController.php". Lets take a look.
-    #app/Controller/Component/FileUpload.php
+In above, we have created a file upload component which uploads the file on server in specific folder.Now, how we are going to use it in controller where I want upload a file. Lets take an another example.Suppose, I want to upload an image of user. So I will do my functionality in "UsersController.php"
+
+1. Lets take a look.
+
+    #app/Controller/Users.php
 
     ```Php
     <?php
 
         App::uses('AppController', 'Controller');
 
-        /**
+       /**
         * @name : UsersController
         * @author: Name of coder
         * @CreatedON : DateOfCreation
@@ -226,9 +239,102 @@ In above, we have created a file upload component which uploads the file on serv
             }
         }
     ?>
-
+    ```
 
 By above example, we can see that how we have called a component in controller and used it.
 
+<h3>VIEW</h3>
 
+View is the representation part of application. It is an UI. What ever the logic and functionality we have done, need to be represented in proper format and structure. The view is responsible for representing things i.e. UI.
+In CakePHP, view come after controller and model. When a data is processed in controller, it  passes that data to view and view represents it.  Following are the conventions to be followed while working with view.
+We store view related files in ``.ctp`` format.
+
+1. Try to create light html pages.
+2. Do use nested loops in view.
+3. Use CakePHP helper for html.
+4. For Common set of html which can be used in other pages also, shoud be converted to element.
+5. Create Helpers to get common functionality done
+6. No queries in View
+7. No Controller Logic in view
+8. No javascript in script tag should be written in Js file properly
+9. Validation should be handled separately
+10. No in line CSS in file. Create developer CSS to handle external changes.
+11. The layout should be made in proper way and header, footer should be manged there itself.
+11. Eg
+
+
+    #app/View/Layout/default.ctp
+
+    ```Php
+    <?php
+        /**
+         *
+         * PHP 5
+         *
+         * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+         * Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
+         *
+         * Licensed under The MIT License
+         * Redistributions of files must retain the above copyright notice.
+         *
+         * @copyright     Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
+         * @link          http://cakephp.org CakePHP(tm) Project
+         * @package       Cake.View.Layouts
+         * @since         CakePHP(tm) v 0.10.0.1076
+         * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+         */
+
+        $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+        ?>
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+            <?php echo $this->Html->charset(); ?>
+            <title>
+                <?php echo $cakeDescription ?>:
+                <?php echo $title_for_layout; ?>
+            </title>
+            <?php
+                echo $this->Html->meta('icon');
+
+                echo $this->Html->css('cake.generic');
+
+                echo $this->fetch('meta');
+                //All css files here
+                $this->Html->css(array(/*all css file in array without extension*/));
+                 echo $this->fetch('css');
+
+                //All Js libraries here
+                $this->Html->script(array(/*all JS file in array without extension*/));
+                echo $this->fetch('script');?>
+        </head>
+        <body>
+            <div id="container">
+               <!-- Header -->
+                <div id="header">
+                    <h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+                </div>
+                <div id="content">
+                    <!--All flash messages will go here-->
+                    <?php echo $this->Session->flash(); ?>
+                    <!--All the contents of the view other than header and footer will come here-->
+                    <?php echo $this->fetch('content'); ?>
+                </div>
+                <!-- Footer-->
+                <div id="footer">
+                    <?php echo $this->Html->link(
+                            $this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
+                            'http://www.cakephp.org/',
+                            array('target' => '_blank', 'escape' => false)
+                        );
+                    ?>
+                </div>
+            </div>
+            <!-- This displays all the sql queries here. Can be disabled by making Debug mode '0' in app/Config/core.php-->
+            <?php echo $this->element('sql_dump'); ?>
+        </body>
+        </html>
+
+    ?>
+    ```
 
