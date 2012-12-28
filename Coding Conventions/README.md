@@ -10,7 +10,7 @@ Before we start with any type of coding conventions, I would prefer to go throug
 
 The Cake PHP is one of the PHP framework created in MVC architecture. It follows all MVC conventions in coding.  Cake PHP consist of three layers.
 
-[Click Here To See : MVC Architecture] (https://github.com/webonise/CakePhp2.x-Notes/blob/master/Coding%20Conventions/Model-View-Controller-Architecture.png)
+![Click Here To See : MVC Architecture] (https://github.com/webonise/CakePhp2.x-Notes/blob/master/Coding%20Conventions/Model-View-Controller-Architecture.png)
 
 1. [Model](https://github.com/webonise/CakePhp2.x-Notes/tree/master/Coding%20Conventions#model)
 
@@ -243,5 +243,90 @@ In above, we have created a file upload component which uploads the file on serv
 
 By above example, we can see that how we have called a component in controller and used it.
 
+<h3>VIEW</h3>
 
+View is the representation part of application. It is an UI. What ever the logic and functionality we have done, need to be represented in proper format and structure. The view is responsible for representing things i.e. UI.
+In CakePHP, view come after controller and model. When a data is processed in controller, it  passes that data to view and view represents it.  Following are the conventions to be followed while working with view.
+We store view related files in ``.ctp`` format.
+
+1. Try to create light html pages.
+2. Do use nested loops in view.
+3. Use CakePHP helper for html.
+4. For Common set of html which can be used in other pages also, shoud be converted to element.
+5. Create Helpers to get common functionality done
+6. No queries in View
+7. No Controller Logic in view
+8. No javascript in script tag should be written in Js file properly
+9. Validation should be handled separately
+10. No in line CSS in file. Create developer CSS to handle external changes.
+11. The layout should be made in proper way and header, footer should be manged there itself.
+11. Eg
+
+
+    #app/View/Layout/default.ctp
+
+    ```Php
+    <?php
+        /**
+         *
+         * PHP 5
+         *
+         * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+         * Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
+         *
+         * Licensed under The MIT License
+         * Redistributions of files must retain the above copyright notice.
+         *
+         * @copyright     Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
+         * @link          http://cakephp.org CakePHP(tm) Project
+         * @package       Cake.View.Layouts
+         * @since         CakePHP(tm) v 0.10.0.1076
+         * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+         */
+
+        $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+        ?>
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+            <?php echo $this->Html->charset(); ?>
+            <title>
+                <?php echo $cakeDescription ?>:
+                <?php echo $title_for_layout; ?>
+            </title>
+            <?php
+                echo $this->Html->meta('icon');
+
+                echo $this->Html->css('cake.generic');
+
+                echo $this->fetch('meta');
+                echo $this->fetch('css');
+                echo $this->fetch('script');?>
+        </head>
+        <body>
+            <div id="container">
+                <div id="header">
+                    <h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+                </div>
+                <div id="content">
+
+                    <?php echo $this->Session->flash(); ?>
+
+                    <?php echo $this->fetch('content'); ?>
+                </div>
+                <div id="footer">
+                    <?php echo $this->Html->link(
+                            $this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
+                            'http://www.cakephp.org/',
+                            array('target' => '_blank', 'escape' => false)
+                        );
+                    ?>
+                </div>
+            </div>
+            <?php echo $this->element('sql_dump'); ?>
+        </body>
+        </html>
+
+    ?>
+    ```
 
