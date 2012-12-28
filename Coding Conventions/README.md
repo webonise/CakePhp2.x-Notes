@@ -338,3 +338,58 @@ We store view related files in ``.ctp`` format.
     ?>
     ```
 
+<h3>Working with Helpers</h3>
+
+Helper are the common set of functionality, which can be used in any view. Likewise component in controller,  hepler  works in view. The helper are storred in ``app/View/Helper/HelperName.php``.
+Following are the conventions to be followed while writing any helper.
+
+1. Helper should not be view dependent. It should have common purpose of creation.
+2. Helper should have meaningful name.
+3. The Helper name should be in camel case letters starting first letter in capital.
+4. The helper class should be extended to parent class i.e. ``AppHelper``
+5. The comment should be given to the helper class.
+6. Eg
+
+    #app/View/Helper/HelperName.php
+
+    <?php
+        /**
+         * Application level View Helper
+         *
+         * This file is helper for all the views.
+         *
+         *
+         * PHP 5
+         *
+         * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+         * Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
+         *
+         * Licensed under The MIT License
+         * Redistributions of files must retain the above copyright notice.
+         *
+         * @copyright     Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
+         * @link          http://cakephp.org CakePHP(tm) Project
+         * @package       app.View.Helper
+         * @since         CakePHP(tm) v 0.2.9
+         * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+         */
+
+        App::uses('AppHelper', 'Helper');
+
+        /**
+         * Common purpose helper
+         *
+         * Add your application-wide methods in the class below, your helpers
+         * will inherit them.
+         *
+         * @package       app.View.Helper
+         */
+        class AppHelper extends Helper {
+
+            // Logic goes here
+
+        }
+
+    ?>
+    ```
+
