@@ -134,10 +134,11 @@ Components are the common set of code which helps controller to perform certain 
 
     ```Php
     <?php
-        /**
+       /**
         * @Component details
         * @author details
-        */
+        *
+        * */
         class ComponentNameComponent extends Component {
 
             /*All public variables here*/
@@ -203,7 +204,7 @@ In above, we have created a file upload component which uploads the file on serv
 
         App::uses('AppController', 'Controller');
 
-        /**
+       /**
         * @name : UsersController
         * @author: Name of coder
         * @CreatedON : DateOfCreation
