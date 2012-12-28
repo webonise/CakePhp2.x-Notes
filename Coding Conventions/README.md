@@ -352,6 +352,7 @@ Following are the conventions to be followed while writing any helper.
 
     #app/View/Helper/HelperName.php
 
+    ```Php
     <?php
         /**
          * Application level View Helper
@@ -372,9 +373,9 @@ Following are the conventions to be followed while writing any helper.
          * @package       app.View.Helper
          * @since         CakePHP(tm) v 0.2.9
          * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
-         */
+         * */
 
-        App::uses('AppHelper', 'Helper');
+            App::uses('AppHelper', 'Helper');
 
         /**
          * Common purpose helper
@@ -384,11 +385,12 @@ Following are the conventions to be followed while writing any helper.
          *
          * @package       app.View.Helper
          */
-        class AppHelper extends Helper {
+
+         class AppHelper extends Helper {
 
             // Logic goes here
 
-        }
+         }
 
     ?>
     ```
