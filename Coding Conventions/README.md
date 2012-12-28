@@ -154,20 +154,21 @@ Components are the common set of code which helps controller to perform certain 
     ?>
     ```
 
-In above, we have declared a variable as $component which include th component in that controller. The component written in Component folder in side the controller.Following are the conventions needs to be followed while creating a component
+In above, we have declared a variable as $component which include th component in that controller. The component written in Component folder in side the controller.Following are the conventions needs to be followed while creating a component.
+
 1. Component name should define it purpose and should be meaningful.
 2. The purpose of writing any component should be strong. It should be reusable in other functionality of controller.
 3. It should not be controller specific.
 4. Component should contain its purpose of creation at the beginning code in comment. With all details of author and file
 5. The object name should be meaningful so that any other developer can get it easily.
-6. Let take an example of File upload component, how I will write this
+6. Let take an example of File upload component, how I will write this.
 
     #app/Controller/Component/FileUpload.php
 
     ```Php
     <?php
         /**
-            File upload component
+         * File upload component
          * @purpose : To upload files on server
          * @Author : Name of the coder (www.weboniselab.com)
          * @createdOn : DateOfCreation         *
@@ -201,7 +202,6 @@ In above, we have created a file upload component which uploads the file on serv
     ```Php
     <?php
          App::uses('AppController', 'Controller');
-
          /**
          * @name : UsersController
          * @author: Name of coder
