@@ -1,7 +1,6 @@
 # Cake DC Migrations Plugin
 
 As an application is developed, changes to the database may be required, and managing that in teams can get extremely difficult. Migrations enables you to share and co-ordinate database changes in an iterative manner, removing the complexity of handling these changes.
-This is not a backup tool, however you can make use of callbacks if you want to backup data or execute extra queries. We highly recommend not to run Migrations in a production environment directly without doing a backup and running it first in a staging environment.
 
 ## Downloading ##
 
@@ -79,6 +78,7 @@ The up part is where you write the code for creating tables,adding columns,updat
 	        )
         )
 
+
 #### Syntax for Dropping Tables ####
 
     'down' => array(
@@ -113,6 +113,7 @@ Create Field is used to add fields to an existing table in the schema.
 #### Syntax for Drop Field ####
 
 Drop field is used for removing fields from existing tables in the schema.
+
 	'drop_field' => array(
 		'users' => array(
 			'created',
@@ -142,14 +143,14 @@ Changes the name of a field on a specified table in the database.
 
 ### Running the migrations ###
 
-The migration you have created will haelp you to complete the task written in it through Cake console.
-Go to the terminal and go to your Project's app/ directory.
+The migration you have created will help you to complete the task written in it through Cake console.
+Go to your Project's app/ directory from the terminal.
 Write the following command:
 
     Console/cake Migrations.migration run up
 
-You will be asked which version to you want to run.
-Give your migration version and press enter.
+You will be asked which version do you want to run.
+Give your migration's version and press enter.
 
 ### Need more help? ###
 
